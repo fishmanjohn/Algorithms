@@ -17,7 +17,7 @@ def recipe_batches(recipe, ingredients):
     else:
       for i in ingredients:
         if recipe[i] > ingredients[i]:
-          batch_counter = batch_counter // 3
+          batch_counter = batch_counter // len(ingredients)
           return batch_counter
         else: 
           ingredients[i] = ingredients[i] - recipe[i]
